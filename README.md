@@ -17,3 +17,9 @@ chmod +x pre-commit
 ```
 
 這樣就完成了，每當你 `commit` 時，會自動把你的 patch 版本號 +1
+
+<br><br><br>
+
+## RoadMap
+
+- 與同時也修改 package.json 的版本號
