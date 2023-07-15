@@ -2,7 +2,18 @@
 
 一句話說明 `wp-pre-commit`
 
-> 讓你每次 commit 時，自動幫你的 plugin.php 裡的 patch 版本號 +1
+> 讓你每次 commit 時，自動幫你的 plugin.php (你的套件入口文件) 裡的 patch 版本號 +1
+
+```php
+/**
+ * Plugin Name: Another WordPress Plugin
+ * Description: Lorem ipsum dolor sit amet
+ * Author: j7.dev
+ * Author URI: https://github.com/j7-dev
+ * License: GPLv2
+ * Version: 1.0.4
+ */
+```
 
 > 例如當前版本號是 Version: 1.0.4，commit 後會變成 Version: 1.0.5
 
@@ -22,4 +33,4 @@ chmod +x pre-commit
 
 ## RoadMap
 
-- 與同時也修改 package.json 的版本號
+- 同時也修改 package.json 的版本號
