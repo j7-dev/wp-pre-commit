@@ -12,6 +12,8 @@
 
 在你的專案上 `.git` 目錄下的 `hooks` 目錄裡，放入 `pre-commit` 這個檔案，並且給予執行權限。
 
-`.git\hooks\pre-commit`
+```sh
+chmod +x pre-commit
+```
 
 這樣就完成了，每當你 `commit` 時，會自動把你的 patch 版本號 +1
