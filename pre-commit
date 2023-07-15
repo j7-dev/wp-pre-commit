@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# change this to your plugin file name
+plugin_file_name="plugin.php"
+
+# Get the current version from the plugin file
+current_version=$(grep -oP "Version: \K.*" $plugin_file_name | sed 's/.*\.//')
+
+# Increment the last digit of the version
+new_version=$(expr "$current_version" + 1)
+
+# Replace the version in the plugin file and create a temporary file
+sed -i "s/\(Version: [0-9]\+\.[0-9]\+\.\)[0-9]\+/\1$new_version/" $plugin_file_name
+
+# Stage the modified plugin file for commit
+git add $plugin_file_name
+
+exit 0
