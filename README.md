@@ -3,6 +3,7 @@
 一句話說明 `wp-pre-commit`
 
 > 讓你每次 commit 時，自動幫你的 plugin.php (你的套件入口文件) 裡的 patch 版本號 +1
+> 也會把 package.json 裡的版本號與你套件版本號同步
 
 ```php
 /**
@@ -33,4 +34,4 @@ chmod +x pre-commit
 
 ## RoadMap
 
-- 同時也修改 package.json 的版本號
+✅ 同時也修改 package.json 的版本號
