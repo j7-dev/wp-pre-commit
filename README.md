@@ -31,6 +31,12 @@ chmod +x pre-commit
 
 這樣就完成了，每當你 `commit` 時，會自動把你的 patch 版本號 +1
 
+至於 major 版本(第一個數字，代表大版本更新，可能API不兼容)
+
+以及 minor 版本(第二個數字，代表小版本更新，可能釋放新的功能)
+
+我都建議手動改就好
+
 <br><br><br>
 
 ## RoadMap
