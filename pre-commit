@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # change this to your plugin file name
-plugin_file_name="plugin.php"
+plugin_file_name="wc-paynow-pro.php"
 
 # Get the current version from the plugin file
 current_version=$(grep -oP "Version: \K.*" $plugin_file_name | sed 's/.*\.//')
@@ -10,7 +10,8 @@ current_version=$(grep -oP "Version: \K.*" $plugin_file_name | sed 's/.*\.//')
 new_version=$(expr "$current_version" + 1)
 
 # Replace the version in the plugin file and create a temporary file
-sed -i "s/\(Version: [0-9]\+\.[0-9]\+\.\)[0-9]\+/\1$new_version/" $plugin_file_name
+sed -i "s/\(Version:[[:space:]]*2\.1\.\)0/\1$new_version/" $plugin_file_name
+
 
 # Get the latest full version from the plugin file
 full_version=$(grep -oP "Version: \K.*" plugin.php)
